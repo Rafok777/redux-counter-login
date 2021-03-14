@@ -1,9 +1,9 @@
 const counterReducer = (status = 0, action) => {
   switch (action.type) {
     case "INCREMENT":
-      return status + 1;
+      return status + action.payload;
     case "DECREMENT":
-      return status - 1;
+      return status - action.payload;
     default:
       return status;
   }
